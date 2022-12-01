@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+@import './variables/mixins.scss';
+@import './variables/variables.scss';
+@import './variables/bootstrap-style.scss';
+@import './variables/keyframes.scss';
+
+@import './blocks/header';
+@import './blocks/hero';
+@import './blocks/character';
+
+
+main {
+    margin-top: 80px;
+    border-radius: 48px 48px 0 0 ;
+    background-color: $gray-light;
+}
