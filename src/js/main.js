@@ -5,3 +5,4 @@ const charSwiper = new Swiper('#characterSwiper', {
         disableOnInteraction: false,
       },
 })
+
