@@ -6,3 +6,6 @@ const charSwiper = new Swiper('#characterSwiper', {
       },
 })
 
+lightbox.option({
+  disableScrolling: true,
+})

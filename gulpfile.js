@@ -30,6 +30,11 @@ function otherScripts() {
 	.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
 
+function video() {
+	return src('src/video/*.*')
+	.pipe(dest('dist/video/'))
+}
+
 function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
 	watch('src/scss/**/*.scss', styles);
@@ -86,5 +91,5 @@ exports.fonts = fonts
 exports.scripts = scripts
 exports.browsersync = browsersync;
 exports.html = parallel(copyPages, copyIndex)
-exports.default = parallel(scripts, otherScripts, images, icons, browsersync, styles, copyIndex, startwatch);
+exports.default = parallel(scripts, otherScripts, video, images, icons, browsersync, styles, copyIndex, startwatch);
 exports.build = series(scripts, styles, copyPages, copyIndex, fonts)
