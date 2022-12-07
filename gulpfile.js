@@ -15,9 +15,17 @@ function browsersync() {
 }
 
 function scripts() {
-	return src('src/js/**/*.js')
+	return src('src/js/main.js')
 	.pipe(concat('main.min.js')) // Конкатенируем в один файл
 	.pipe(uglify()) // Сжимаем JavaScript
+	.pipe(dest('dist/js/')) // Выгружаем готовый файл в папку назначения
+	.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
+}
+
+function otherScripts() {
+	return src('src/js/*.js')
+	// .pipe(concat('main.min.js')) // Конкатенируем в один файл
+	// .pipe(uglify()) // Сжимаем JavaScript
 	.pipe(dest('dist/js/')) // Выгружаем готовый файл в папку назначения
 	.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
@@ -78,5 +86,5 @@ exports.fonts = fonts
 exports.scripts = scripts
 exports.browsersync = browsersync;
 exports.html = parallel(copyPages, copyIndex)
-exports.default = parallel(scripts, images, icons, browsersync, styles, copyIndex, startwatch);
+exports.default = parallel(scripts, otherScripts, images, icons, browsersync, styles, copyIndex, startwatch);
 exports.build = series(scripts, styles, copyPages, copyIndex, fonts)

@@ -12,6 +12,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-uglify-es": "^3.0.0",
+    "lightbox2": "^2.11.3",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
