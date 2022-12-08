@@ -17,10 +17,13 @@
 @import './blocks/variants';
 @import './blocks/video';
 @import './blocks/whywe';
+@import './blocks/gallery';
 
 
 main {
     margin-top: 80px;
     border-radius: 48px 48px 0 0 ;
     background-color: $gray-light;
+
+    padding-bottom: 100px;
 }

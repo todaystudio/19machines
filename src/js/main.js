@@ -1,11 +1,10 @@
-
 // Characteristic block Swiper
 const charSwiper = new Swiper('#characterSwiper', {
-    effect: 'fade',
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
+  effect: 'fade',
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 })
 
 //Lightbox option
@@ -24,3 +23,17 @@ playVideoBtn.addEventListener('click', () => {
 
 videoPlayer.addEventListener('pause', () => playVideoBtn.style.display = 'block')
 videoPlayer.addEventListener('ended', () => playVideoBtn.style.display = 'block')
+
+//Gallery Swiper Slider
+const gallerySwiper = new Swiper('#gallery', {
+  slidesPerView: 6,
+  grid: {
+    fill: 'row',
+    rows: 3,
+  },
+  spaceBetween: 20,
+  pagination: {
+    el: ".gallery__pagination",
+    clickable: true,
+  },
+})
