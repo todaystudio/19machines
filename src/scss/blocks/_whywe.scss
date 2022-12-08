@@ -1,0 +1,20 @@
+.whywe-sec {
+    margin: 80px 0 33px 0;
+}
+
+.whywe {
+    &__wrap {
+        display: flex;
+    }
+
+    &__first-col {}
+
+    &__second-col {}
+
+    &__third-col {}
+
+    &__item {
+        background: linear-gradient(98.94deg, #2B274E 6.86%, #100B34 87.11%);
+        border-radius: 31px;
+    }
+}
