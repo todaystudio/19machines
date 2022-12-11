@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +13,11 @@
 	<link rel="stylesheet" href="font/stylesheet.css">
 	<link rel="stylesheet" href="css/lightbox.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
+
+	<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=d37e8582-1cbd-41b4-ae29-6ef0c26870e6&lang=ru_RU"
+		type="text/javascript">
+	</script>
 
 	<title>19 машин – группа промышленных предприятийa</title>
 </head>
@@ -482,8 +488,97 @@
 			</div>
 		</section>
 
+		<section class="section order-sec">
+			<div class="container order">
+				<img src="./img/order-item-1.png" class="order__img-item oImage1" alt="">
+				<img src="./img/order-item-2.png" class="order__img-item oImage2" alt="">
+				<img src="./img/order-item-3.png" class="order__img-item oImage3" alt="">
+				<div class="order__inner">
+					<h4 class="title">СДЕЛАТЬ ЗАКАЗ</h4>
+					<form action="#" class="order__form">
+						<div class="order__form-inner">
+							<div class="order__part order__left">
+								<input type="text" class="order__input" name="name" placeholder="Имя" required>
+								<input type="tel" class="order__input" name="phone" placeholder="+7" required>
+								<input type="email" class="order__input" name="email" placeholder="e-mail" required>
+								<label class="order__file">
+									<input type="file" name="file" id="fileInput">
+									<span class="input-file-btn">Выберите файл</span>
+									<span class="input-file-text">Максимум 10 Mb</span>
+								</label>
+								<!-- <div id="captcha"></div> -->
+							</div>
+							<div class="order__part order__right">
+								<textarea name="msg" id="orderText" rows="10" class="order__textarea"
+									placeholder="Опишите задачу или приложите файл"></textarea>
+								<div class="order__policy-wrap">
+									<input type="checkbox" name="policy" id="policy">
+									<label for="policy" class="order__policy-label">
+										Я согласен на <a href="#">обработку персональных данных</a>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="order__submit-wrap">
+							<div id="captcha" class="h-captcha" data-sitekey="28f03946-47c1-4434-a21a-8473808de369"
+								data-theme="dark"></div>
+
+							<button class="order__submit" type="submit">
+								Заказать
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer section">
+			<div class="container">
+				<div class="footer__top">
+					<a href="./"><img src="./img/logo-full.svg" alt=""></a>
+					<div class="header__right">
+						<a class="header__phone btn-text-sm w-line" href="tel:+78362981090"><img
+								src="./img/phone-light-footer.svg" alt=""><span>8 (8362) 98-10-90</span></a>
+						<button class="header__call-me call-me btn-text-sm">Перезвоните мне</button>
+					</div>
+				</div>
+
+				<div class="footer__mid">
+					<div class="footer__contacts">
+						<div class="footer__time">
+							с 9:00 до 18:00
+						</div>
+
+						<div class="footer__email">
+							info@19machines.ru
+						</div>
+
+						<div class="footer__info">
+							<p>ООО “19”</p>
+							<p>424029, Республика Марий Эл, <br>
+								г. Йошкар-Ола, ул. Анциферова, <br>
+								д. 4В, офис 1</p>
+							<p>ИНН: 1215230983</p>
+							<p>ОГРН: 1191215006113</p>
+						</div>
+
+						<div class="footer__link-policy">
+							<a href="#">Политика обработки персональных данных</a>
+						</div>
+					</div>
+
+					<div class="footer__map" id="yamap">
+
+					</div>
+				</div>
+			</div>
+		</footer>
+
 	</main>
 
+	<script>
+		
+	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="./js/lightbox-plus-jquery.min.js"></script>

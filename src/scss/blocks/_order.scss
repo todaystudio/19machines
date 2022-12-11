@@ -1,0 +1,211 @@
+.order-sec {
+    margin-top: 80px;
+}
+
+.order {
+    padding: 43px 77px;
+
+    background-image: url(../img/order-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 19px;
+
+    position: relative;
+
+    .title {
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    &__img-item {
+        position: absolute;
+    }
+
+    .oImage1 {
+        left: 120px;
+        bottom: 39px;
+    }
+    .oImage2 {
+        right: 0;
+        bottom: 39px;
+    }
+    .oImage3 {
+        top: 20px;
+        right: 10%;   
+    }
+
+    &__form {
+
+
+        input,
+        textarea,
+        label,
+        button {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__form-inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    &__part {
+        flex: 1 1;
+    }
+
+    &__input,
+    &__textarea {
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 11px;
+
+        box-sizing: border-box;
+
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 17px 25px;
+        margin-bottom: 20px;
+
+        color: #B9B9B9;
+    }
+
+    &__textarea {
+        padding: 17px 25px;
+        resize: vertical;
+    }
+
+    &__policy-wrap {
+        margin-top: 20px;
+
+        label {
+            font-size: 13px;
+            line-height: 16px;
+            color: #FFFFFF;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        input {
+            margin-right: 16px;
+        }
+    }
+
+    .order__file {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .input-file-btn {
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        vertical-align: middle;
+        color: rgb(255 255 255);
+        text-align: center;
+        border: 1px solid #9A9A9A;
+        border-radius: 11px;
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 17px 25px;
+        box-sizing: border-box;
+        margin: 0;
+        transition: background-color 0.2s;
+    }
+
+    .input-file-text {
+        padding: 0 10px;
+        margin-left: 15px;
+        line-height: 40px;
+        font-size: 16px;
+        font-style: italic;
+        color: #ffffff90;
+        max-width: 170px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .order__file input[type=file] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+
+    /* Focus */
+    .order__file input[type=file]:focus+.input-file-btn {
+        border: 1px solid #6C5ED4;
+    }
+
+    /* Hover/active */
+    .order__file:hover .input-file-btn {
+        background-color: #ffffff30;
+    }
+
+    .order__file:active .input-file-btn {
+        background-color: #ffffff50;
+        border: 1px solid #6C5ED4;
+    }
+
+    /* Disabled */
+    .order__file input[type=file]:disabled+.input-file-btn {
+        background-color: #eee;
+    }
+
+    .h-captcha {
+        margin-top: 20px;
+    }
+
+    &__submit-wrap {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__submit {
+        height: 55px;
+        max-width: 485px;
+        width: 80%;
+
+        background: #6C5ED4;
+        box-shadow: 0px 0px 12px #6C5ED4;
+        border-radius: 11px;
+
+        font-size: 18px;
+        line-height: 152%;
+        color: #FFFFFF;
+        border: 1px solid transparent;
+
+        transition: all 200ms ease;
+
+        &:hover {
+            box-sizing: border-box;
+            border: 1px solid #b2a8fb;
+        }
+    }
+
+}

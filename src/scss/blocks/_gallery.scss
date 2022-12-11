@@ -41,6 +41,10 @@
         background-repeat: no-repeat;
     }
 
+    &__next.swiper-button-disabled, &__prev.swiper-button-disabled {
+        opacity: .6;
+    }
+
     &__next {transform: rotate(180deg);}
 
     &__pagination {
