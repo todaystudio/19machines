@@ -48,6 +48,9 @@
     &__time,
     &__email {
         margin-bottom: 7px;
+        a {
+            color: inherit;
+        }
     }
 
     &__info {
@@ -76,5 +79,13 @@
         
         width: 600px;
         height: 376px;
+    }
+    
+    &__copyright {
+        width: 100%;
+        margin-top: 60px;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
     }
 }

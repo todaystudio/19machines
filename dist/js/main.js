@@ -65,10 +65,11 @@ fileInput.addEventListener('change', fileChanged)
   
 // Yandex Map 
 
+const coords = [56.651151068042545, 47.86287599999997]
 
 function init() {
   let map = new ymaps.Map('yamap', {
-    center: [56.651151068042545, 47.86287599999997],
+    center: coords,
     zoom: 17
   })
 
@@ -78,6 +79,14 @@ function init() {
   map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
   map.controls.remove('zoomControl'); // удаляем контрол зуммирования
   map.controls.remove('rulerControl'); // удаляем контрол правил
+
+  let placemark = new ymaps.Placemark(coords, {}, {
+		iconLayout: 'default#image',
+		iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
+		iconImageSize: [40, 40],
+		iconImageOffset: [-19, -44]
+	});
+
 }
 
 ymaps.ready(init)

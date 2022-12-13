@@ -550,7 +550,7 @@
 						</div>
 
 						<div class="footer__email">
-							info@19machines.ru
+							<a href="#">info@19machines.ru</a>
 						</div>
 
 						<div class="footer__info">
@@ -570,6 +570,19 @@
 					<div class="footer__map" id="yamap">
 
 					</div>
+				</div>
+				<div class="footer__copyright">
+					&#169; 2022 Dевятнадцать Машин. Все права защищены.
+					<script>
+						const paragraph = `
+						<p>
+						  &copy; ${new Date().getFullYear()} Dевятнадцать Машин. Все права защищены.
+						</p>
+					  `;
+				  
+						document.querySelector('.footer__copyright').innerHTML = paragraph;
+					  </script>
+					
 				</div>
 			</div>
 		</footer>
