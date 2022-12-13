@@ -47,7 +47,7 @@ const fileInput = document.querySelector('#fileInput')
 
 const fileChanged = e => {
   let fileName = e.target.files[0].name || 'Файл не выбран'
-  document.querySelector('.input-file-text').innerHTML = fileName 
+  document.querySelector('.input-file-text').innerHTML = fileName
 }
 
 fileInput.addEventListener('change', fileChanged)
@@ -62,7 +62,7 @@ fileInput.addEventListener('change', fileChanged)
 //         console.error(err);
 //     });
 
-  
+
 // Yandex Map 
 
 const coords = [56.651151068042545, 47.86287599999997]
@@ -80,12 +80,22 @@ function init() {
   map.controls.remove('zoomControl'); // удаляем контрол зуммирования
   map.controls.remove('rulerControl'); // удаляем контрол правил
 
-  let placemark = new ymaps.Placemark(coords, {}, {
-		iconLayout: 'default#image',
-		iconImageHref: 'https://image.flaticon.com/icons/png/512/64/64113.png',
-		iconImageSize: [40, 40],
-		iconImageOffset: [-19, -44]
-	});
+  let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  )
+
+  let placemark = new ymaps.Placemark(coords, {
+    balloonContent: 'г. Йошкар-Ола, ул. Анциферова, д. 4В, офис 1',
+    iconContent: 12,
+  }, {  
+    iconLayout: 'default#image',
+    iconImageHref: '../img/placemark.svg',
+    iconImageSize: [40, 40],
+    iconContentLayout: MyIconContentLayout,
+    iconContentOffset: [-15, -15],
+  });
+
+  map.geoObjects.add(placemark)
 
 }
 

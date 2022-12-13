@@ -1,0 +1,113 @@
+@media (max-width: 834px) {
+    .header {
+        &__mail {
+            display: none;
+        }
+
+        &__right {
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        &__call-me {
+            display: block;
+            margin-left: auto;
+        }
+    }
+    .hero {
+        padding: 38px 35px 46px 65px;
+        h1 {
+            font-size: 34px;
+            line-height: 136%;
+        }
+        &__text-item {
+            font-size: 14px;
+            line-height: 139%;
+        }
+        &__btn {
+            font-size: 16px;
+        }
+        &__item_4 {
+            right: -70px;
+        }
+        &__item_2 {
+            left: -60px;
+        }
+    }
+    .character {
+        .character-wrap {
+            flex-direction: column;
+            justify-content: center;  
+            gap: 35px;
+        }
+        &__left, &__right {
+            max-width: 90%;
+        }
+        &__list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .pre-order {
+        max-width: 50%;
+        margin-left: 40px;
+        margin-right: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 35px;
+        &__item {
+            left: auto;
+            right: -30px;
+            top: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        &__logo-img {
+            display: none;
+        }
+    
+        &__logo-mobile {
+            display: block;
+        }
+        &__phone  {
+            span {font-size: 12px;}
+            img {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        &__call-me {
+            font-size: 10px;
+        }
+    }
+
+    .hero {
+        padding: 35px 22px;
+        h1 {
+            font-size: 22px;
+            line-height: 136%;
+        }
+        &__texts {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        &__btn {
+            font-size: 14px;
+        }
+        &__item_1 {
+            top: auto;
+            bottom: 50px;
+            right: -30px;
+        }
+        &__item_4, &__item_3 {
+            display: none;
+        }
+    }
+    
+}

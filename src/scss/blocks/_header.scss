@@ -9,6 +9,10 @@
         gap: 40px;
     }
 
+    &__logo-mobile {
+        display: none;
+    }
+
     &__right {
         justify-content: flex-end;
     }
