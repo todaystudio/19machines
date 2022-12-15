@@ -108,7 +108,6 @@
 
     &__item:not(.whywe__first-item) {}
 
-    &__icon {}
 
     &__text {
         font-family: 'Montserrat';
@@ -121,11 +120,5 @@
 
     &__first-item {
         height: 100%;
-
-
     }
-
-    &__third-item {}
-
-    &__five-item {}
 }
