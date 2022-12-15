@@ -135,31 +135,70 @@
             font-size: 16px;
             line-height: 17px;
         }
+        .whywe__first-col .whywe__item h6 {padding-left: 0;}
 
-        &__first-col {
-            .whywe__icon {
-                margin-top: 0;
-            }
+        .whywe__first-col .whywe__item .whywe__icon {
+            margin-top: 0;
+            max-width: 180px;
         }
 
         &__item {
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 172px !important;
         }
-        &__icon, &__text {
+
+        &__icon,
+        &__text {
             position: static !important;
             top: auto !important;
             left: auto !important;
             right: auto !important;
             bottom: auto !important;
             transform: translate(0, 0) translateY(0) translateX(0) !important;
+        }        
+    }
+
+    .order {
+        &__form-inner {
+            flex-direction: column;
+            gap: 20px;
         }
-        &__third-col &__item {
-            min-height: auto;
+        &__right {
+            width: 100%;
+        }
+        &__policy-wrap {
+            padding-left: 20px;
+        }
+    } 
+}
+
+@media (max-width: 734px) {
+    .footer {
+        &__top a img {
+            max-width: 143px;
+        }
+        &__mid {
+            flex-direction: column;
+        }
+        &__contacts {
+            text-align: center;
+            margin: 0 auto;
+        }
+        &__map {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 40px;
         }
     }
 }
+
+@media (max-width: 665px) {
+    .whywe__col.whywe__third-col {
+            flex-direction: column;
+        }
+    }
 
 @media (max-width: 500px) {
     .header {
@@ -238,7 +277,7 @@
             width: 100%;
         }
 
-        &__btn {}
+    
 
         &__item {
             transform: scale(0.5);
@@ -272,6 +311,34 @@
 
         &__item {
             display: none;
+        }
+    }
+
+    .order {
+        padding-left: 21px;
+        padding-right: 21px;
+        &__img-item.oImage2, &__img-item.oImage3 {
+            display: none;
+        }
+        &__img-item.oImage1 {
+            left: auto;
+            right: 20px;
+            bottom: 60px;
+        }
+        &__form {
+            input, textarea, .input-file-btn, .input-file-text {
+                font-size: 14px;
+            }
+        }
+        
+    }
+
+    .modal {
+        max-height: 90vh;
+        &__title {
+            font-size: 18px;
+            max-width: 100%;
+            margin-bottom: 20px;
         }
     }
 

@@ -26,7 +26,7 @@ videoPlayer.addEventListener('ended', () => playVideoBtn.style.display = 'block'
 
 //Gallery Swiper Slider
 const gallerySwiper = new Swiper('#gallery', {
-  slidesPerView: 6,
+  slidesPerView: 2,
   grid: {
     fill: 'row',
     rows: 3,
@@ -40,6 +40,29 @@ const gallerySwiper = new Swiper('#gallery', {
     nextEl: '.gallery__next',
     prevEl: '.gallery__prev',
   },
+  breakpoints: {
+    585: {
+      slidesPerView: 3,
+      grid: {
+        fill: 'row',
+        rows: 3,
+      },
+    },
+    834: {
+      slidesPerView: 4,
+      grid: {
+        fill: 'row',
+        rows: 3,
+      },
+    },
+    1200: {
+      slidesPerView: 6,
+      grid: {
+        fill: 'row',
+        rows: 3,
+      },
+    }
+  }
 })
 
 //Input File
@@ -54,14 +77,14 @@ fileInput.addEventListener('change', fileChanged)
 
 //hCaptcha
 
-// hcaptcha.execute('captcha', { async: true })
-//     .then(({ response, key }) => {
-//         console.log(response, key);
-//     })
-//     .catch(err => {
-//         console.error(err);
-//     });
+// document.addEventListener('DOMContentLoaded', () => {
+//   hcaptcha.render('captcha', {
+//     sitekey: '28f03946-47c1-4434-a21a-8473808de369',
+//     theme: 'dark',
+//   });
 
+  
+// })
 
 // Yandex Map 
 
@@ -100,3 +123,24 @@ function init() {
 }
 
 ymaps.ready(init)
+
+//Load more
+
+const grid = document.querySelector('.variants__grid')
+const items =  document.querySelectorAll('.variants__item')
+const viewWidth = document.documentElement.clientWidth
+const loadMore = document.querySelector('#loadMore')
+
+const loadMoreFactory = state => {
+  items.forEach((item, idx) => {
+    if (idx >= 4) item.style.display = state
+  })
+  if (state === 'block') loadMore.style.display = 'none'
+}
+
+if (viewWidth < 530) loadMoreFactory('none')
+
+const loadMoreItems = () => loadMoreFactory('block')
+
+loadMore.addEventListener('click', loadMoreItems)
+

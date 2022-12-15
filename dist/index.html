@@ -24,6 +24,31 @@
 
 <body>
 
+	<div class="overlay">
+		<div class="modal">
+			<div class="modal__cross"><img src="./images/close.png" alt=""></div>
+			<h4 class="modal__title">Оставьте свои контакты и мы вам перезвоним!</h4>
+			<form action="#">
+				<input type="text" placeholder="Имя" required name="name">
+				<input type="phone" placeholder="+7" required name="phone">
+				<div class="modal__policy-wrap">
+					<input type="checkbox" name="policy" id="policy">
+					<label for="policy" class="modal__policy-label">
+						Я согласен на <a href="#">обработку персональных данных</a>
+					</label>
+				</div>
+				<div class="modal__submit-wrap">
+					<div id="captcha" class="h-captcha modal__captcha" data-sitekey="28f03946-47c1-4434-a21a-8473808de369"
+					data-theme="dark" data-size="compact"></div>
+
+				<button class="order__submit" type="submit">
+					Заказать
+				</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
 	<header class="header">
 		<div class="container header-wrap">
 			<div class="header__left">
@@ -583,10 +608,10 @@
 						  &copy; ${new Date().getFullYear()} Dевятнадцать Машин. Все права защищены.
 						</p>
 					  `;
-				  
+
 						document.querySelector('.footer__copyright').innerHTML = paragraph;
-					  </script>
-					
+					</script>
+
 				</div>
 			</div>
 		</footer>
@@ -594,7 +619,7 @@
 	</main>
 
 	<script>
-		
+
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
