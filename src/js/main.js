@@ -100,3 +100,24 @@ function init() {
 }
 
 ymaps.ready(init)
+
+//Load more
+
+const grid = document.querySelector('.variants__grid')
+const items =  document.querySelectorAll('.variants__item')
+const viewWidth = document.documentElement.clientWidth
+const loadMore = document.querySelector('#loadMore')
+
+const loadMoreFactory = state => {
+  items.forEach((item, idx) => {
+    if (idx >= 4) item.style.display = state
+  })
+  if (state === 'block') loadMore.style.display = 'none'
+}
+
+if (viewWidth < 530) loadMoreFactory('none')
+
+const loadMoreItems = () => loadMoreFactory('block')
+
+loadMore.addEventListener('click', loadMoreItems)
+

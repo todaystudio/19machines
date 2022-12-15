@@ -14,12 +14,14 @@
     justify-content: space-between;
     gap: 55px;
 
+    position: relative;
+    z-index: 10;
 
     &__item {
         position: absolute;
         bottom: 8%;
         left: 20%;
-        z-index: 10;
+        z-index: 1;
         display: block;
     }
 

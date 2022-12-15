@@ -27,8 +27,8 @@
         background: #1F1B39;
         border-radius: 19px;
         overflow: hidden;
-        width: 280px;
-        height: 280px;
+        width: 100%;
+        height: auto;
 
         position: relative;
 
@@ -50,8 +50,9 @@
             mix-blend-mode: lighten;
             transition: all 200ms ease-in-out;
 
-            
+
         }
+
         &:hover::before {
             opacity: 1;
         }
@@ -73,6 +74,27 @@
 
         padding: 0 18px;
         margin-top: 18px;
+    }
+
+    &__load-more {
+        display: block;
+        margin: 0 auto;
+        margin-top: 35px;
+
+        border: 1px solid #888888;
+        border-radius: 10px;
+        padding: 10px 25px;
+        color: #8C8C8C;
+        font-family: 'Montserrat', serif;
+        font-size: 12px;
+        line-height: 152%;
+
+        transition: .3s;
+
+        &:hover {
+            border: 1px solid #636363;
+            color: #636363;
+        }
     }
 
 }

@@ -1,3 +1,26 @@
+@media (max-width: 1200px) {
+    .whywe {
+        &__text {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__first-col {
+            flex: none;
+
+            .whywe__item {
+                padding: 0;
+
+                .whywe__icon {
+                    max-width: 230px;
+                    margin-top: 50px;
+                }
+            }
+        }
+
+    }
+}
+
 @media (max-width: 834px) {
     .header {
         &__mail {
@@ -15,35 +38,45 @@
             margin-left: auto;
         }
     }
+
     .hero {
         padding: 38px 35px 46px 65px;
+
         h1 {
             font-size: 34px;
             line-height: 136%;
         }
+
         &__text-item {
             font-size: 14px;
             line-height: 139%;
         }
+
         &__btn {
             font-size: 16px;
         }
+
         &__item_4 {
             right: -70px;
         }
+
         &__item_2 {
             left: -60px;
         }
     }
+
     .character {
         .character-wrap {
             flex-direction: column;
-            justify-content: center;  
+            justify-content: center;
             gap: 35px;
         }
-        &__left, &__right {
+
+        &__left,
+        &__right {
             max-width: 90%;
         }
+
         &__list {
             li {
                 font-size: 14px;
@@ -58,10 +91,72 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 35px;
+
+        &__right {
+            width: 100%;
+        }
+
         &__item {
             left: auto;
             right: -30px;
             top: 30px;
+        }
+    }
+
+    .variants {
+        &__grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__name {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .video {
+        flex-direction: column;
+
+        &__item {
+            bottom: auto;
+            top: 20px;
+            left: auto;
+            right: 20px;
+            transform: scale(.6);
+        }
+    }
+
+    .whywe {
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 17px;
+        }
+
+        &__first-col {
+            .whywe__icon {
+                margin-top: 0;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__icon, &__text {
+            position: static !important;
+            top: auto !important;
+            left: auto !important;
+            right: auto !important;
+            bottom: auto !important;
+            transform: translate(0, 0) translateY(0) translateX(0) !important;
+        }
+        &__third-col &__item {
+            min-height: auto;
         }
     }
 }
@@ -71,17 +166,22 @@
         &__logo-img {
             display: none;
         }
-    
+
         &__logo-mobile {
             display: block;
         }
-        &__phone  {
-            span {font-size: 12px;}
+
+        &__phone {
+            span {
+                font-size: 12px;
+            }
+
             img {
                 width: 14px;
                 height: 14px;
             }
         }
+
         &__call-me {
             font-size: 10px;
         }
@@ -89,25 +189,90 @@
 
     .hero {
         padding: 35px 22px;
+
         h1 {
             font-size: 22px;
             line-height: 136%;
         }
+
         &__texts {
             grid-template-columns: 1fr;
             gap: 15px;
         }
+
         &__btn {
             font-size: 14px;
         }
+
         &__item_1 {
             top: auto;
             bottom: 50px;
             right: -30px;
         }
-        &__item_4, &__item_3 {
+
+        &__item_4,
+        &__item_3 {
             display: none;
         }
     }
-    
+
+    .pre-order {
+        max-width: 300px;
+        padding-right: 15px;
+        margin-left: 40px;
+        margin-right: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 35px;
+
+        &__left {
+            max-width: none;
+
+            h4 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+
+        &__right {
+            width: 100%;
+        }
+
+        &__btn {}
+
+        &__item {
+            transform: scale(0.5);
+            left: auto;
+            right: -117px;
+            top: 106px;
+        }
+    }
+
+    .variants {
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__name {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .video {
+        gap: 40px;
+
+        &__left {
+            h4 {
+                font-size: 20px;
+                line-height: 132%;
+                max-width: 293px;
+            }
+        }
+
+        &__item {
+            display: none;
+        }
+    }
+
 }
