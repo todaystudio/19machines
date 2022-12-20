@@ -24,6 +24,10 @@
 @import './blocks/responsive';
 
 
+body, html {
+    scroll-behavior: smooth;
+}
+
 main {
     margin-top: 80px;
     border-radius: 48px 48px 0 0 ;

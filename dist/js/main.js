@@ -83,7 +83,7 @@ fileInput.addEventListener('change', fileChanged)
 //     theme: 'dark',
 //   });
 
-  
+
 // })
 
 // Yandex Map 
@@ -110,7 +110,7 @@ function init() {
   let placemark = new ymaps.Placemark(coords, {
     balloonContent: 'г. Йошкар-Ола, ул. Анциферова, д. 4В, офис 1',
     iconContent: 12,
-  }, {  
+  }, {
     iconLayout: 'default#image',
     iconImageHref: '../img/placemark.svg',
     iconImageSize: [40, 40],
@@ -127,7 +127,7 @@ ymaps.ready(init)
 //Load more
 
 const grid = document.querySelector('.variants__grid')
-const items =  document.querySelectorAll('.variants__item')
+const items = document.querySelectorAll('.variants__item')
 const viewWidth = document.documentElement.clientWidth
 const loadMore = document.querySelector('#loadMore')
 
@@ -144,3 +144,32 @@ const loadMoreItems = () => loadMoreFactory('block')
 
 loadMore.addEventListener('click', loadMoreItems)
 
+
+// Overlay & Modal
+
+const overlay = document.querySelector('.overlay')
+const modal = document.querySelector('.modal')
+const cross = document.querySelector('.modal__cross')
+const callBackBtn = document.querySelectorAll('.call-me')
+
+const toggleModal = (close) => {
+  if (close === 'open') {
+    overlay.classList.add('overlay__show')
+    modal.classList.add('modal__show')
+    overlay.classList.remove('overlay__close')
+    modal.classList.remove('modal__close')
+  }
+
+  if (close === 'close') {
+    overlay.classList.remove('overlay__show')
+    modal.classList.remove('modal__show')
+    overlay.classList.add('overlay__close')
+    modal.classList.add('modal__close')
+  }
+
+}
+
+callBackBtn.forEach(i => i.addEventListener('click', () => toggleModal('open')))
+cross.addEventListener('click', () => {
+  toggleModal('close')
+})
